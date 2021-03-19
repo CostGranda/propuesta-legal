@@ -1,4 +1,9 @@
 module.exports = {
+  siteMetadata: {
+    title: `Propuesta legal`,
+    description: `Firma de abogadas`,
+    author: `Propuesta legal S.A.S`,
+  },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
@@ -17,6 +22,17 @@ module.exports = {
       options: {
         name: `pages`,
         path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-prismic',
+      options: {
+        repositoryName: 'PropuestaLegal',
+        accessToken:
+          'MC5ZRlFoN0JNQUFDSUFFZkx6.OCPvv73vv73vv70Y77-977-977-9F--_vT3vv73vv73vv71wdSPvv73vv73vv73vv70q77-9LWBOUu-_ve-_vVA_',
+        schemas: {
+          home: require('./src/shemas/home.json'),
+        },
       },
     },
     {

@@ -1,0 +1,109 @@
+{
+  "Main": {
+    "banner_logo": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "banner_logo"
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {
+          "services": [],
+          "about_us": []
+        },
+        "choices": {
+          "services": {
+            "type": "Slice",
+            "fieldset": "Services",
+            "description": "Services",
+            "icon": "work",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {
+              "service_image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Service_Image"
+                }
+              },
+              "servicetitle": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "ServiceTitle",
+                  "placeholder": "Tilulo de servicio"
+                }
+              },
+              "resumenservice": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph",
+                  "label": "ResumenService",
+                  "placeholder": "Resumen del servicio"
+                }
+              }
+            }
+          },
+          "about_us": {
+            "type": "Slice",
+            "fieldset": "About us",
+            "description": "¿Quienes somos?",
+            "icon": "people",
+            "display": "list",
+            "non-repeat": {
+              "aboutus_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "AboutUs title",
+                  "placeholder": "¿Quienes somos?"
+                }
+              }
+            },
+            "repeat": {
+              "lawyer": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "lawyer"
+                }
+              },
+              "name": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "Name",
+                  "placeholder": "Nombre de la abogada"
+                }
+              },
+              "lawyer_role": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "lawyer role",
+                  "placeholder": "Cargo"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph",
+                  "label": "Description",
+                  "placeholder": "Descripción"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
