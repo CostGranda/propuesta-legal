@@ -19,15 +19,21 @@
   }
 
   .about-wrapper {
-    @include respond(phone) {
-      padding-bottom: 5rem;
-    }
-
     &:nth-child(2n + 1) {
       .about-info__container {
         order: -1;
       }
     }
+
+    @include respond(phone) {
+      padding-bottom: 5rem;
+      &:nth-child(2n + 1) {
+        .about-info__container {
+          order: 1;
+        }
+      }
+    }
+
 
     &__image {
       display: flex;
